@@ -42,17 +42,17 @@ function moveMole() {
 
 moveMole()
 
+let timerId = setInterval(countDown, 1000)
 function countDown() {
-    // Set Timer to Decrement By 1. 
-    currentTime--
-    timeLeft.textContent = currentTime
-
     // When Timer Gets to 0, Notify User Game Over and Show Final Score.
     if(currentTime === 0) {
         clearInterval(timerId)
+        score=null
         alert('GAME OVER! Your Final Score Is: ' + result)
-    }
+        return;
+    }else{
+         // Set Timer to Decrement By 1. 
+        currentTime--
+        timeLeft.textContent = currentTime
+    } timeLeft -= 1;
 }
-
-// Make Timer Invoke Every 1 Second.
-let timerId = setInterval(countDown, 1000)
