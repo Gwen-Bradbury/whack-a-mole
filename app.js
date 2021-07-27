@@ -46,8 +46,11 @@ let timerId = setInterval(countDown, 1000)
 function countDown() {
     // When Timer Gets to 0, Notify User Game Over and Show Final Score.
     if(currentTime === 0) {
+        // Set timer to 0
         clearInterval(timerId)
+        //Set score back to 0
         score=null
+        //If user presses ok (confirm=True) reload window.
         if (confirm('GAME OVER! Your Final Score Is: ' + result + ' Play Again?')){
             window.location.reload();
         }
