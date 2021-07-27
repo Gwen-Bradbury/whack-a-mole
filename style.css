@@ -1,3 +1,37 @@
+body {
+    background-color: #353534;
+}
+
+.container { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    padding-right: 50px;
+}
+
+.title {
+    color: #cfb796;
+}
+
+.score {
+    color: #e69c2d;
+}
+
+.score-text {
+    color: #a78a60;
+}
+
+.time-left {
+    color: #e69c2d;
+}
+
+.time-left-text {
+    color: #a78a60;
+}
+
 .square {
     width: 200px;
     height: 200px;
@@ -11,7 +45,7 @@
     justify-content: center;
     align-content: center;
     width: 618px;
-    height: 618px;
+    height: 100vh;
 }
 
 .mole {
