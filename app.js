@@ -48,7 +48,9 @@ function countDown() {
     if(currentTime === 0) {
         clearInterval(timerId)
         score=null
-        alert('GAME OVER! Your Final Score Is: ' + result)
+        if (confirm('GAME OVER! Your Final Score Is: ' + result + ' Play Again?')){
+            window.location.reload();
+        }
         return;
     }else{
          // Set Timer to Decrement By 1. 
