@@ -51,7 +51,7 @@ function countDown() {
         //Set score back to 0
         score=null
         //If user presses ok (confirm=True) reload window.
-        if (confirm('GAME OVER! Your Final Score Is: ' + result + ' Play Again?')){
+        if (confirm('GAME OVER! Your Final Score Is: ' + result + '\nPlay Again?')){
             window.location.reload();
         }
         return;
