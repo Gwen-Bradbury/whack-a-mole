@@ -26,6 +26,11 @@ square.forEach(id => {
     id.addEventListener('mouseup', () => {
         // If the Mouse Click Equals the div id of Our hitPosition We Win.
         if(id.id === hitPosition){
+            // Show Hit Image when Mouse Click Successful.
+            id.classList.add('hit')
+            setTimeout(function(){
+                id.classList.remove('hit');
+            }, 500);
             result = result + 1
             // Visually Display Score In Browser.
             score.textContent = result
@@ -51,7 +56,7 @@ function countDown() {
         //Set score back to 0
         score=null
         //If user presses ok (confirm=True) reload window.
-        if (confirm('GAME OVER! Your Final Score Is: ' + result + '\nPlay Again?')){
+        if (confirm('GAME OVER! \nYour Final Score Is: ' + result + '\nPlay Again?')){
             window.location.reload();
         }
         return;
